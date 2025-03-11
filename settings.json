@@ -1,0 +1,12 @@
+{
+    "corFundo": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+    },
+    "pixelPorMetro": 70,
+    "terreno": {
+        "largura": 12,
+        "comprimento": 25
+    }
+}
