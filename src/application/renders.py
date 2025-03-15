@@ -21,3 +21,7 @@ class IRender(ABC):
     @abstractmethod
     def line(self, start: Vector, end: Vector, color: Color) -> None:
         pass
+    
+    @abstractmethod
+    def quad(self, position: Vector, size: int, color: Color) -> None:
+        pass

@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Union
 
 from src.enterprise.pillar_entity import PillarEntity
 from src.enterprise.wall_entity import WallEntity
@@ -20,6 +20,10 @@ class PillarRepository(IPillarRepository):
     
     def all(self):
         return self.pillars
+    
+    def find_by_id(self, id: int) -> Union[PillarEntity, None]:
+        pillar = next((p for p in self.pillars if p.id == id), None)
+        return pillar
 
 class WallRepository(IWallRepository):
 
@@ -36,3 +40,7 @@ class WallRepository(IWallRepository):
     
     def all(self):
         return self.walls
+    
+    def find_by_id(self, id: int) -> Union[WallEntity, None]:
+        wall = next((w for w in self.walls if w.id == id), None)
+        return wall

@@ -34,7 +34,7 @@ class PillarEntity(GameObjectEntity):
         if self.selected:
             new_x = Events.MOUSE_POS.x // 3.5
             new_y = Events.MOUSE_POS.y // 3.5
-            self.posicao = Vector(new_x * 3.5, new_y * 3.5)
+            self.position = Vector(new_x * 3.5, new_y * 3.5)
 
     # def render(self):
     #     tamanho_pixels = self.tamanho * Configuracao.PIXELS_POR_METRO

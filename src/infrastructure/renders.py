@@ -19,3 +19,8 @@ class Render(IRender):
     
     def line(self, start: Vector, end: Vector, color: Color):
         pygame.draw.line(self.screen, color.tupple(), start.tupple(), end.tupple())
+    
+    def quad(self, position: Vector, size: int, color: Color) -> None:
+        top = int(position.x - size / 2)
+        left = int(position.y - size / 2)
+        pygame.draw.rect(self.screen, color.tupple(), (top, left, size, size))
