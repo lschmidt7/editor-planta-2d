@@ -7,6 +7,10 @@ from src.enterprise.wall_entity import WallEntity
 class IPillarRepository(ABC):
 
     @abstractmethod
+    def generate_id(self) -> int:
+        pass
+
+    @abstractmethod
     def add(self, pillar : PillarEntity) -> None:
         pass
 
@@ -15,6 +19,10 @@ class IPillarRepository(ABC):
         pass
 
 class IWallRepository(ABC):
+
+    @abstractmethod
+    def generate_id(self) -> int:
+        pass
 
     @abstractmethod
     def add(self, wall : WallEntity) -> None:

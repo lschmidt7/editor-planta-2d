@@ -1,12 +1,10 @@
 import pygame
 
-from src.enterprise.pillar_entity import PillarEntity
-from src.enterprise.wall_entity import WallEntity
 from src.enterprise.value_objects import Color, Vector
 
-from src.application.renders import IPillarRender, IWallRender, IScreenRender
+from src.application.renders import IRender
 
-class ScreenRender(IScreenRender):
+class Render(IRender):
 
     def initialize(self, width: int, height: int, title: str):
         pygame.init()
@@ -21,19 +19,3 @@ class ScreenRender(IScreenRender):
     
     def line(self, start: Vector, end: Vector, color: Color):
         pygame.draw.line(self.screen, color.tupple(), start.tupple(), end.tupple())
-
-class PillarRender(IPillarRender):
-
-    def __init__(self):
-        pass
-    
-    def render(self, pillar: PillarEntity):
-        pass
-
-class WallRender(IWallRender):
-
-    def __init__(self):
-        pass
-    
-    def render(self, wall: WallEntity):
-        pass
